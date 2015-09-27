@@ -10,7 +10,8 @@ ESANN 2013. Bruges, Belgium 24-26 April 2013.
 1. To Merge the training and the test sets to create one data set and to uses descriptive activity names to name the activities
   in the data set , I made the following
 
-Using read.table and colnames, I read the activity labels from a revised version from the file activity_labels.txt, where the descriptors and the numbers
+Using read.table and colnames, I read the activity labels from a revised version from the file activity_labels.txt (included in the REPO--note that if you want to 
+reproduce the R program you need to incorporate this text file into your working Directory) , where the descriptors and the numbers
 were reshaped to create two columns, with names Activity_id and Activity_Desc respectively.  
 
 
@@ -21,8 +22,8 @@ the train datasets.
 Using sqldf, I tested that the distinct number of individuals is ok and check dimensions of the file.
  
 
-After, I Read all the measures of the test group participants: a total of 561 variables for 9 individuals, with measurements
-for each of the six activities studie, and  read all activities identification for each row of the x_test file above.
+Next, I Read all the measures of the test group participants: a total of 561 variables for 9 individuals, with measurements
+for each of the six activities studied, and  read all activities identification for each row of the x_test file above.
 
 
 I joined the activity labels with the previous file using an inner join.  The variable used for the join was
@@ -93,13 +94,15 @@ The REPO includes the following files:
 
 3. CodeBook.MD : include more details about the variables, labels and measurements of the project, and the work done to clean data.
 
+4. activity_labelsRev.txt: to be copied with the run_analysis.R to be able to incorporate the activities description when the program runs.
+
 and two text files that reproduced the original text files README.txt and Features_info.txt from the 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.  The purpose is to make easier for the review to find
 detailed information if needed.
 
-4. README_HumanActivityRecognitionUsingSmartphonesDataset
+5. README_HumanActivityRecognitionUsingSmartphonesDataset
 
-5. features_info_originaldataset
+6. features_info_originaldataset
 
 
 
